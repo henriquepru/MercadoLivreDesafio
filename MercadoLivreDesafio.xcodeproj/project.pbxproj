@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D6B710122255550E00AE6399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710112255550E00AE6399 /* AppDelegate.swift */; };
 		D6B710142255550E00AE6399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710132255550E00AE6399 /* ViewController.swift */; };
-		D6B710172255550E00AE6399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B710152255550E00AE6399 /* Main.storyboard */; };
 		D6B710192255551000AE6399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B710182255551000AE6399 /* Assets.xcassets */; };
 		D6B7101C2255551000AE6399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		D6B7100E2255550E00AE6399 /* MercadoLivreDesafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLivreDesafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B710112255550E00AE6399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B710132255550E00AE6399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D6B710162255550E00AE6399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B710182255551000AE6399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6B7101B2255551000AE6399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B7101D2255551000AE6399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +52,37 @@
 		D6B710102255550E00AE6399 /* MercadoLivreDesafio */ = {
 			isa = PBXGroup;
 			children = (
+				D6B71023225555F500AE6399 /* Core */,
 				D6B710112255550E00AE6399 /* AppDelegate.swift */,
 				D6B710132255550E00AE6399 /* ViewController.swift */,
-				D6B710152255550E00AE6399 /* Main.storyboard */,
 				D6B710182255551000AE6399 /* Assets.xcassets */,
 				D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */,
 				D6B7101D2255551000AE6399 /* Info.plist */,
 			);
 			path = MercadoLivreDesafio;
+			sourceTree = "<group>";
+		};
+		D6B71023225555F500AE6399 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D6B71024225555FB00AE6399 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D6B71024225555FB00AE6399 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D6B71025225556C200AE6399 /* EndPoint */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D6B71025225556C200AE6399 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +145,6 @@
 			files = (
 				D6B7101C2255551000AE6399 /* LaunchScreen.storyboard in Resources */,
 				D6B710192255551000AE6399 /* Assets.xcassets in Resources */,
-				D6B710172255550E00AE6399 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D6B710152255550E00AE6399 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6B710162255550E00AE6399 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
