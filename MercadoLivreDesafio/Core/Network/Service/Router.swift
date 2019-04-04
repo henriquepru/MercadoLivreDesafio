@@ -15,23 +15,23 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
-            let request = try self.buildRequest(from: route)
+            let request = try buildRequest(from: route)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
             })
         } catch {
             completion(nil, nil, error)
         }
-        self.task?.resume()
+        task?.resume()
     }
     
     func cancel() {
-        self.task?.cancel()
+        task?.cancel()
     }
 }
 
 extension Router {
-    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+    private func buildRequest(from route: EndPoint) throws -> URLRequest {
         
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
@@ -44,17 +44,15 @@ extension Router {
             case .request:
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             case .requestParameters(let bodyParameters, let urlParameters):
-                try self.configureParameters(
-                    bodyParameters: bodyParameters,
-                    urlParameters: urlParameters,
-                    request: &request
-                )
+                try configureParameters(bodyParameters: bodyParameters,
+                                        urlParameters: urlParameters,
+                                        request: &request)
             case .requestParametersAndHeaders(let bodyParameters, let urlParameters, let additionHeaders):
                 
-                self.addAdditionalHeaders(additionHeaders, request: &request)
-                try self.configureParameters(bodyParameters: bodyParameters,
-                                             urlParameters: urlParameters,
-                                             request: &request)
+                addAdditionalHeaders(additionHeaders, request: &request)
+                try configureParameters(bodyParameters: bodyParameters,
+                                        urlParameters: urlParameters,
+                                        request: &request)
             }
             return request
         } catch {
@@ -62,7 +60,7 @@ extension Router {
         }
     }
     
-    fileprivate func configureParameters(bodyParameters: Parameters?,
+    private func configureParameters(bodyParameters: Parameters?,
                                          urlParameters: Parameters?,
                                          request: inout URLRequest) throws {
         do {
@@ -77,7 +75,7 @@ extension Router {
         }
     }
     
-    fileprivate func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
+    private func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
         guard let headers = additionalHeaders else { return }
         headers.forEach { request.setValue($0.value, forHTTPHeaderField: $0.key) }
     }
