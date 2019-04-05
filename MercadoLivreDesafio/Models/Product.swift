@@ -40,10 +40,10 @@ extension Product: Decodable {
         case id
         case title
         case price
-        case currencyId
-        case availableQuantity
+        case currencyId = "currency_id"
+        case availableQuantity = "available_quantity"
         case thumbnailString = "thumbnail"
-        case acceptsMercadopago
+        case acceptsMercadopago = "accepts_mercadopago"
     }
     
     init(from decoder: Decoder) throws {

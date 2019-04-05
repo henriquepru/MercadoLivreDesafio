@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62C7BE02257B47B00E1270B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BDF2257B47B00E1270B /* ProductService.swift */; };
 		D6B710122255550E00AE6399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710112255550E00AE6399 /* AppDelegate.swift */; };
 		D6B710142255550E00AE6399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710132255550E00AE6399 /* ViewController.swift */; };
 		D6B710192255551000AE6399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B710182255551000AE6399 /* Assets.xcassets */; };
@@ -23,9 +24,11 @@
 		D6B7103D22567F9E00AE6399 /* ProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B7103C22567F9E00AE6399 /* ProductEndPoint.swift */; };
 		D6B7104122568DC900AE6399 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B7104022568DC900AE6399 /* Product.swift */; };
 		D6B710442256947300AE6399 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710432256947300AE6399 /* NetworkManager.swift */; };
+		D6B71046225791B900AE6399 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B71045225791B900AE6399 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D62C7BDF2257B47B00E1270B /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		D6B7100E2255550E00AE6399 /* MercadoLivreDesafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLivreDesafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B710112255550E00AE6399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B710132255550E00AE6399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		D6B7103C22567F9E00AE6399 /* ProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndPoint.swift; sourceTree = "<group>"; };
 		D6B7104022568DC900AE6399 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D6B710432256947300AE6399 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D6B71045225791B900AE6399 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,9 @@
 		D6B710102255550E00AE6399 /* MercadoLivreDesafio */ = {
 			isa = PBXGroup;
 			children = (
+				D6B71023225555F500AE6399 /* Core */,
 				D6B7103F22568D6500AE6399 /* Models */,
 				D6B7103E22568D5900AE6399 /* Services */,
-				D6B71023225555F500AE6399 /* Core */,
 				D6B710112255550E00AE6399 /* AppDelegate.swift */,
 				D6B710132255550E00AE6399 /* ViewController.swift */,
 				D6B710182255551000AE6399 /* Assets.xcassets */,
@@ -130,8 +134,8 @@
 		D6B7102F2255622B00AE6399 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
-				D6B710302255624A00AE6399 /* URLParameterEncoder.swift */,
 				D6B710322255628C00AE6399 /* ParameterEncoder.swift */,
+				D6B710302255624A00AE6399 /* URLParameterEncoder.swift */,
 				D6B7103422566B9300AE6399 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B71025225556C200AE6399 /* EndPoint */,
+				D62C7BDF2257B47B00E1270B /* ProductService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B710432256947300AE6399 /* NetworkManager.swift */,
+				D6B71045225791B900AE6399 /* Result.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -232,11 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B7103922566DFC00AE6399 /* Router.swift in Sources */,
+				D62C7BE02257B47B00E1270B /* ProductService.swift in Sources */,
 				D6B7102A225557FE00AE6399 /* HTTPMethod.swift in Sources */,
 				D6B7102C225558BE00AE6399 /* HTTPTask.swift in Sources */,
 				D6B710332255628C00AE6399 /* ParameterEncoder.swift in Sources */,
 				D6B710142255550E00AE6399 /* ViewController.swift in Sources */,
 				D6B7102E2255614800AE6399 /* NetworkError.swift in Sources */,
+				D6B71046225791B900AE6399 /* Result.swift in Sources */,
 				D6B7103522566B9300AE6399 /* JSONParameterEncoder.swift in Sources */,
 				D6B710312255624A00AE6399 /* URLParameterEncoder.swift in Sources */,
 				D6B7103722566CFE00AE6399 /* NetworkRouter.swift in Sources */,

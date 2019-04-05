@@ -32,7 +32,10 @@ extension ProductApi: EndPointType {
     }
     
     var path: String {
-        return ""
+        switch self {
+        case .search:
+            return "search"
+        }
     }
     
     var httpMethod: HTTPMethod {
@@ -42,7 +45,7 @@ extension ProductApi: EndPointType {
     var task: HTTPTask {
         switch self {
         case .search(let searchedString):
-            return .requestParameters(bodyParameters: nil, urlParameters: ["search": searchedString])
+            return .requestParameters(bodyParameters: nil, urlParameters: ["q": searchedString])
         }
     }
     

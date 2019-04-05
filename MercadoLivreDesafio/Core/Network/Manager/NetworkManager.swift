@@ -8,17 +8,11 @@
 
 import Foundation
 
-enum Result<T> {
-    case success(T)
-    case failure(Error)
-}
-
 struct NetworkManager {
     static let environment: NetworkEnvironment = .production
     static let ProductAPIKey = "API_KEY"
-    private let router = Router<ProductApi>()
-    
-    private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Void> {
+
+    static func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Void> {
         switch response.statusCode {
         case 200...299: return .success(())
         case 401...500: return .failure(NetworkResponseError.authenticationError)
@@ -32,7 +26,9 @@ struct NetworkManager {
 enum NetworkResponseError: String, Error {
     case authenticationError = "You need to be authenticate first."
     case badRequest = "Bad Request."
+    case noData = "Response returned with no data to decode."
     case failed = "Network request failed."
     case outdated = "The url you requested is outdated."
-    
+    case connection = "Please check your network connection."
+    case unableToDecode = "We could not decode the response"
 }
