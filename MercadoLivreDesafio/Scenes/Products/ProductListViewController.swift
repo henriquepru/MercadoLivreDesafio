@@ -15,8 +15,9 @@ protocol ProductListViewControllerOutput {
 
 class ProductListViewController: UIViewController {
     
-    private let searchBar: UISearchBar = {
+    private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
+        searchBar.delegate = self
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.backgroundColor = .red
         return searchBar
@@ -24,6 +25,7 @@ class ProductListViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.keyboardDismissMode = .onDrag
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -65,6 +67,19 @@ extension ProductListViewController: ProductListPresenterOutput {
 extension ProductListViewController {
     private func setupDataSource(viewModels: [ProductItemCell.ViewModel]) {
         dataSource.viewModels = viewModels
+    }
+}
+
+extension ProductListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text {
+            searchBar.resignFirstResponder()
+            output?.searchProducts(searchString: searchText)
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 

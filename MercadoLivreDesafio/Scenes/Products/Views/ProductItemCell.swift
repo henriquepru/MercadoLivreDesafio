@@ -23,7 +23,7 @@ class ProductItemCell: UITableViewCell {
         let imageView = RoundedImageView()
         imageView.image = #imageLiteral(resourceName: "empty-product")
         imageView.backgroundColor = UIColor.lightGray
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
