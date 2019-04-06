@@ -51,6 +51,8 @@ class ProductItemCell: UITableViewCell {
         return label
     }()
     
+    private let imageFetcher = ImageFetcherKingFisher()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -63,7 +65,7 @@ class ProductItemCell: UITableViewCell {
 
 extension ProductItemCell {
     func setup(viewMode: ViewModel) {
-        //productImageView.image = viewMode.productImageUrl KingsFisher
+        imageFetcher.fetchImage(from: viewMode.productImageUrl, to: productImageView)
         titleLabel.text = viewMode.title
         priceLabel.text = viewMode.price
         availableQuantityLabel.text = viewMode.availableQuantity
