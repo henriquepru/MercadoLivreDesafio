@@ -50,7 +50,6 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        output?.searchProducts(searchString: "playstation")
     }
 }
 

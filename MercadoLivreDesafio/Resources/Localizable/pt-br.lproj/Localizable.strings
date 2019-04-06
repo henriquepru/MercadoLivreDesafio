@@ -7,3 +7,5 @@
 */
 
 "available" = "disponivel";
+"nodata" = "Nada Aqui";
+"trySearchingSomething" = "tente buscar algo.";

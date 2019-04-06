@@ -7,3 +7,5 @@
 */
 
 "available" = "disponible";
+"nodata" = "Sin Datos";
+"trySearchingSomething" = "intente buscar algo.";
