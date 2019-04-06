@@ -12,10 +12,12 @@ struct ApplicationCoordinator: Coordinator {
     
     private let window: UIWindow
     private let rootController: UINavigationController
+    private let productListCoordinator: ProductListCoordinator
     
     init(window: UIWindow) {
         self.window = window
         rootController = ApplicationCoordinator.customNavigationController()
+        productListCoordinator = ProductListCoordinator(navigation: rootController)
     }
 }
 
@@ -23,6 +25,7 @@ extension ApplicationCoordinator {
     func start() {
         window.rootViewController = rootController
         window.makeKeyAndVisible()
+        productListCoordinator.start()
     }
 }
 

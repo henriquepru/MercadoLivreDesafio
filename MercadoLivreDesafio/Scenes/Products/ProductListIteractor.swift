@@ -16,10 +16,15 @@ protocol ProductListIteractorOutput {
 class ProductListIteractor {
     private let service: ProductServiceType
     private let output: ProductListIteractorOutput
+    private let coordinatorDelegate: ProductListCoordinatorDelegate
     
-    init(service: ProductServiceType, output: ProductListIteractorOutput) {
+    init(service: ProductServiceType,
+         output: ProductListIteractorOutput,
+         coordinatorDelegate: ProductListCoordinatorDelegate) {
+        
         self.service = service
         self.output = output
+        self.coordinatorDelegate = coordinatorDelegate
     }
 }
 

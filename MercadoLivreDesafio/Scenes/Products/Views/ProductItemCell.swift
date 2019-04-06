@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ProductItemCell {
+extension ProductItemCell: ReusableView {
     struct ViewModel {
         let productImageUrl: URL
         let title: String

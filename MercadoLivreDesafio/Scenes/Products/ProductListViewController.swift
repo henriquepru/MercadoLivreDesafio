@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol ProductListViewControllerOutput {
     func searchProducts(searchString: String)
     func selectProductItem(itemIndex: Int)
@@ -29,6 +28,11 @@ class ProductListViewController: UIViewController {
         return tableView
     }()
     
+    lazy var dataSource = {
+        ProductListDataSourceDelegate(tableView: tableView,
+                                      selectItemHandler: output?.selectProductItem ?? {_ in })
+    }()
+    
     var output: ProductListViewControllerOutput?
     
     init() {
@@ -42,19 +46,25 @@ class ProductListViewController: UIViewController {
 }
 
 extension ProductListViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         output?.searchProducts(searchString: "playstation")
     }
 }
 
 extension ProductListViewController: ProductListPresenterOutput {
     func displayProducts(products: [ProductItemCell.ViewModel]) {
-        
+        setupDataSource(viewModels: products)
     }
     
     func displayError(errorMessage: String) {
         
+    }
+}
+
+extension ProductListViewController {
+    private func setupDataSource(viewModels: [ProductItemCell.ViewModel]) {
+        dataSource.viewModels = viewModels
     }
 }
 

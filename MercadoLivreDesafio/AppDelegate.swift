@@ -16,16 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let service = ProductService()
-        let controller = ProductListViewController()
-        let presenter = ProductListPresenter(output: controller)
-        iteractor = ProductListIteractor(service: service, output: presenter)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let applicationCoordinator = ApplicationCoordinator(window: window)
+        self.window = window
         
-        controller.output = iteractor!
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = controller
-        window?.makeKeyAndVisible()
+        applicationCoordinator.start()
         
         return true
     }

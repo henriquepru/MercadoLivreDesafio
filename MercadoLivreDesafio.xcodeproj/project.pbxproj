@@ -32,6 +32,11 @@
 		D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46272257EBFA0044597B /* ProductItemCell.swift */; };
 		D6CF462B2258E6150044597B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */; };
 		D6CF462D2258E6270044597B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462C2258E6270044597B /* Coordinator.swift */; };
+		D6CF462F2258E7770044597B /* ProductListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462E2258E7770044597B /* ProductListCoordinator.swift */; };
+		D6CF46312258E8DD0044597B /* ProductListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46302258E8DD0044597B /* ProductListConfigurator.swift */; };
+		D6CF46332258EE9A0044597B /* ProductListDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46322258EE9A0044597B /* ProductListDataSourceDelegate.swift */; };
+		D6CF46352258F07B0044597B /* UITableView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46342258F07B0044597B /* UITableView+ReusableView.swift */; };
+		D6CF46372258F0B40044597B /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46362258F0B40044597B /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		D6CF46272257EBFA0044597B /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
 		D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		D6CF462C2258E6270044597B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D6CF462E2258E7770044597B /* ProductListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinator.swift; sourceTree = "<group>"; };
+		D6CF46302258E8DD0044597B /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
+		D6CF46322258EE9A0044597B /* ProductListDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataSourceDelegate.swift; sourceTree = "<group>"; };
+		D6CF46342258F07B0044597B /* UITableView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableView.swift"; sourceTree = "<group>"; };
+		D6CF46362258F0B40044597B /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,9 @@
 				D62C7BE32257DD0800E1270B /* ProductListIteractor.swift */,
 				D62C7BE52257E53E00E1270B /* ProductListPresenter.swift */,
 				D62C7BE72257E85B00E1270B /* ProductListViewController.swift */,
+				D6CF462E2258E7770044597B /* ProductListCoordinator.swift */,
+				D6CF46302258E8DD0044597B /* ProductListConfigurator.swift */,
+				D6CF46322258EE9A0044597B /* ProductListDataSourceDelegate.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -207,6 +220,8 @@
 			children = (
 				D6CF46292258E5FD0044597B /* Coordinator */,
 				D6CF46242257E9F60044597B /* CodeView.swift */,
+				D6CF46342258F07B0044597B /* UITableView+ReusableView.swift */,
+				D6CF46362258F0B40044597B /* Reusable.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -298,22 +313,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CF46312258E8DD0044597B /* ProductListConfigurator.swift in Sources */,
 				D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */,
 				D6B7103922566DFC00AE6399 /* Router.swift in Sources */,
 				D62C7BE02257B47B00E1270B /* ProductService.swift in Sources */,
 				D6B7102A225557FE00AE6399 /* HTTPMethod.swift in Sources */,
+				D6CF462F2258E7770044597B /* ProductListCoordinator.swift in Sources */,
 				D6CF46252257E9F60044597B /* CodeView.swift in Sources */,
 				D6B7102C225558BE00AE6399 /* HTTPTask.swift in Sources */,
 				D6B710332255628C00AE6399 /* ParameterEncoder.swift in Sources */,
+				D6CF46332258EE9A0044597B /* ProductListDataSourceDelegate.swift in Sources */,
 				D6B710142255550E00AE6399 /* ViewController.swift in Sources */,
 				D62C7BE62257E53E00E1270B /* ProductListPresenter.swift in Sources */,
 				D6B7102E2255614800AE6399 /* NetworkError.swift in Sources */,
+				D6CF46352258F07B0044597B /* UITableView+ReusableView.swift in Sources */,
 				D62C7BE42257DD0800E1270B /* ProductListIteractor.swift in Sources */,
 				D6B71046225791B900AE6399 /* Result.swift in Sources */,
 				D6B7103522566B9300AE6399 /* JSONParameterEncoder.swift in Sources */,
 				D62C7BE82257E85B00E1270B /* ProductListViewController.swift in Sources */,
 				D6B710312255624A00AE6399 /* URLParameterEncoder.swift in Sources */,
 				D6B7103722566CFE00AE6399 /* NetworkRouter.swift in Sources */,
+				D6CF46372258F0B40044597B /* Reusable.swift in Sources */,
 				D6B710122255550E00AE6399 /* AppDelegate.swift in Sources */,
 				D6CF462D2258E6270044597B /* Coordinator.swift in Sources */,
 				D6B710442256947300AE6399 /* NetworkManager.swift in Sources */,
