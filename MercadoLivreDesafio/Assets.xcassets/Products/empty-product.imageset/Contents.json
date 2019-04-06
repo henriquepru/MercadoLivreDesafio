@@ -7,12 +7,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "empty-image2x.png",
+      "filename" : "empty-image@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "empty-image3x.png",
+      "filename" : "empty-image@3x.png",
       "scale" : "3x"
     }
   ],

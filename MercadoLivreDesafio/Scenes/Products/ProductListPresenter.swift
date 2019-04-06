@@ -29,7 +29,7 @@ extension ProductListPresenter: ProductListIteractorOutput {
             ViewModel(
                 productImageUrl: $0.thumbnailURL,
                 title: $0.title,
-                price: " \($0.currencyId) \($0.price)",
+                price: String(format: "\($0.currencyId) %.02f", $0.price),
                 availableQuantity: "\($0.availableQuantity) " + "available".localized)
         })
     }

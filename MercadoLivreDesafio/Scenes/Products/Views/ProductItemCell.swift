@@ -22,6 +22,8 @@ class ProductItemCell: UITableViewCell {
     private let productImageView: RoundedImageView = {
         let imageView = RoundedImageView()
         imageView.image = #imageLiteral(resourceName: "empty-product")
+        imageView.backgroundColor = UIColor.lightGray
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -44,6 +46,7 @@ class ProductItemCell: UITableViewCell {
     
     private let availableQuantityLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
