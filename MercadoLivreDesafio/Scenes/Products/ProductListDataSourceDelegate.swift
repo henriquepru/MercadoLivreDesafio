@@ -52,13 +52,7 @@ extension ProductListDataSourceDelegate {
 
 extension ProductListDataSourceDelegate: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if viewModels.isEmpty {
-            tableView.setEmptyView()
-        } else {
-            tableView.restore()
-        }
-        
+        viewModels.isEmpty ? tableView.setEmptyView() : tableView.restore()
         return viewModels.count
     }
     
