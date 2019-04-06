@@ -13,10 +13,6 @@ protocol ProductListIteractorOutput {
     func presentError(error: Error)
 }
 
-protocol ProductListIteractorInput {
-    func searchProducts(searchString: String)
-}
-
 class ProductListIteractor {
     private let service: ProductServiceType
     private let output: ProductListIteractorOutput
@@ -27,7 +23,7 @@ class ProductListIteractor {
     }
 }
 
-extension ProductListIteractor: ProductListIteractorInput {
+extension ProductListIteractor: ProductListViewControllerOutput {
     func searchProducts(searchString: String) {
         service.fetchProducts(with: searchString) { [weak self] result in
             switch result {
@@ -37,5 +33,9 @@ extension ProductListIteractor: ProductListIteractorInput {
                 self?.output.presentError(error: error)
             }
         }
+    }
+    
+    func selectProductItem(itemIndex: Int) {
+        
     }
 }

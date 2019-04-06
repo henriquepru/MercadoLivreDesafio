@@ -12,9 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var iteractor: ProductListIteractor?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let service = ProductService()
+        let controller = ProductListViewController()
+        let presenter = ProductListPresenter(output: controller)
+        iteractor = ProductListIteractor(service: service, output: presenter)
+        
+        controller.output = iteractor!
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

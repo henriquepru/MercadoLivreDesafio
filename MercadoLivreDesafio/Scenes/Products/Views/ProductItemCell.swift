@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension ProductItemCell {
+    struct ViewModel {
+        let productImageUrl: URL
+        let title: String
+        let price: String
+        let availableQuantity: String
+    }
+}
+
 class ProductItemCell: UITableViewCell {
     
     private let productImageView: UIImageView = {
@@ -41,6 +50,15 @@ class ProductItemCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ProductItemCell {
+    func setup(viewMode: ViewModel) {
+        //productImageView.image = viewMode.productImageUrl KingsFisher
+        titleLabel.text = viewMode.title
+        priceLabel.text = viewMode.price
+        availableQuantityLabel.text = viewMode.availableQuantity
     }
 }
 

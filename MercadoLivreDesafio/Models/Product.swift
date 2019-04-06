@@ -30,7 +30,7 @@ struct Product {
     let price: Double
     let currencyId: String
     let availableQuantity: Int
-    let thumbnailString: String
+    let thumbnailURL: URL
     let acceptsMercadopago: Bool
 }
 
@@ -42,7 +42,7 @@ extension Product: Decodable {
         case price
         case currencyId = "currency_id"
         case availableQuantity = "available_quantity"
-        case thumbnailString = "thumbnail"
+        case thumbnailURL = "thumbnail"
         case acceptsMercadopago = "accepts_mercadopago"
     }
     
@@ -54,7 +54,7 @@ extension Product: Decodable {
         price = try productContainer.decode(Double.self, forKey: .price)
         currencyId = try productContainer.decode(String.self, forKey: .currencyId)
         availableQuantity = try productContainer.decode(Int.self, forKey: .availableQuantity)
-        thumbnailString = try productContainer.decode(String.self, forKey: .thumbnailString)
+        thumbnailURL = try productContainer.decode(URL.self, forKey: .thumbnailURL)
         acceptsMercadopago = try productContainer.decode(Bool.self, forKey: .acceptsMercadopago)
     }
 }
