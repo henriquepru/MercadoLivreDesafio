@@ -19,20 +19,25 @@ extension ProductItemCell: ReusableView {
 
 class ProductItemCell: UITableViewCell {
     
-    private let productImageView: UIImageView = {
-        let imageView = UIImageView()
+    private let productImageView: RoundedImageView = {
+        let imageView = RoundedImageView()
+        imageView.image = #imageLiteral(resourceName: "empty-product")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let priceLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -75,21 +80,20 @@ extension ProductItemCell: CodeView {
         NSLayoutConstraint.activate([
             productImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             productImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            productImageView.heightAnchor.constraint(equalToConstant: 50),
-            productImageView.widthAnchor.constraint(equalToConstant: 50),
+            productImageView.heightAnchor.constraint(equalToConstant: 60),
+            productImageView.widthAnchor.constraint(equalToConstant: 60),
             
             titleLabel.topAnchor.constraint(equalTo: productImageView.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             
-            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
-            priceLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             priceLabel.leadingAnchor.constraint(greaterThanOrEqualTo: productImageView.trailingAnchor, constant: 8),
             
-            availableQuantityLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 8),
-            availableQuantityLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8),
-            availableQuantityLabel.leadingAnchor.constraint(greaterThanOrEqualTo: productImageView.trailingAnchor,
-                                                            constant: 8)
+            availableQuantityLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            availableQuantityLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: -8),
+            availableQuantityLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 8)
         ])
     }
 }

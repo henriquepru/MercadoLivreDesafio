@@ -30,7 +30,7 @@ extension ProductListPresenter: ProductListIteractorOutput {
                 productImageUrl: $0.thumbnailURL,
                 title: $0.title,
                 price: " \($0.currencyId) \($0.price)",
-                availableQuantity: "\($0.availableQuantity)")
+                availableQuantity: "\($0.availableQuantity) " + "available".localized)
         })
     }
     
