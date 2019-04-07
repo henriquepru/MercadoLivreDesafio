@@ -41,8 +41,6 @@
 		D6CF4647225906FE0044597B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6CF4645225906FE0044597B /* Localizable.strings */; };
 		D6CF464E225913B20044597B /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF464D225913B20044597B /* String+Localizable.swift */; };
 		D6CF465422591D780044597B /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF465322591D780044597B /* ImageFetcher.swift */; };
-		D6CF465D225931A30044597B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CF465C225931A30044597B /* Kingfisher.framework */; };
-		D6CF465E225931A30044597B /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6CF465C225931A30044597B /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6CF4661225932670044597B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF4660225932670044597B /* EmptyDataView.swift */; };
 		D6CF46632259340B0044597B /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46622259340B0044597B /* UITableView+EmptyView.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D6CF465E225931A30044597B /* Kingfisher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,7 +100,6 @@
 		D6CF464D225913B20044597B /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		D6CF464F225914D30044597B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6CF465322591D780044597B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
-		D6CF465C225931A30044597B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		D6CF4660225932670044597B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		D6CF46622259340B0044597B /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6CF465D225931A30044597B /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +140,6 @@
 		D6B710052255550E00AE6399 = {
 			isa = PBXGroup;
 			children = (
-				D6CF465C225931A30044597B /* Kingfisher.framework */,
 				D6B710102255550E00AE6399 /* MercadoLivreDesafio */,
 				D6B7100F2255550E00AE6399 /* Products */,
 				D6CF465022591D400044597B /* Frameworks */,
@@ -570,7 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M99837SUN;
+				DEVELOPMENT_TEAM = 7N8NL8R3ZZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -580,7 +574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.MercadoLivreDesafio;
+				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.mercadolivreDesafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -592,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M99837SUN;
+				DEVELOPMENT_TEAM = 7N8NL8R3ZZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -602,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.MercadoLivreDesafio;
+				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.mercadolivreDesafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
