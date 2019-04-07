@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010B3368CBE2330AA8110E28 /* Pods_MercadoLivreDesafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */; };
 		D62C7BE02257B47B00E1270B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BDF2257B47B00E1270B /* ProductService.swift */; };
 		D62C7BE42257DD0800E1270B /* ProductListIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BE32257DD0800E1270B /* ProductListIteractor.swift */; };
 		D62C7BE62257E53E00E1270B /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BE52257E53E00E1270B /* ProductListPresenter.swift */; };
@@ -59,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivreDesafio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B4EC66007E8ABC698CF32C /* Pods-MercadoLivreDesafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.debug.xcconfig"; sourceTree = "<group>"; };
 		D62C7BDF2257B47B00E1270B /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		D62C7BE32257DD0800E1270B /* ProductListIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListIteractor.swift; sourceTree = "<group>"; };
 		D62C7BE52257E53E00E1270B /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		D6CF465322591D780044597B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		D6CF4660225932670044597B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		D6CF46622259340B0044597B /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
+		E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,21 +113,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010B3368CBE2330AA8110E28 /* Pods_MercadoLivreDesafio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40ED8675AF99A494B309F3B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5B4EC66007E8ABC698CF32C /* Pods-MercadoLivreDesafio.debug.xcconfig */,
+				E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D540BA30225A57190099CB0E /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
 		D62C7BE12257DB3900E1270B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D62C7BE22257DB5600E1270B /* Products */,
+				D540BA30225A57190099CB0E /* ProductDetail */,
+				D62C7BE22257DB5600E1270B /* ProductList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		D62C7BE22257DB5600E1270B /* Products */ = {
+		D62C7BE22257DB5600E1270B /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
 				D6CF46262257EBDA0044597B /* Views */,
@@ -134,7 +156,7 @@
 				D6CF46302258E8DD0044597B /* ProductListConfigurator.swift */,
 				D6CF46322258EE9A0044597B /* ProductListDataSourceDelegate.swift */,
 			);
-			path = Products;
+			path = ProductList;
 			sourceTree = "<group>";
 		};
 		D6B710052255550E00AE6399 = {
@@ -143,6 +165,7 @@
 				D6B710102255550E00AE6399 /* MercadoLivreDesafio */,
 				D6B7100F2255550E00AE6399 /* Products */,
 				D6CF465022591D400044597B /* Frameworks */,
+				40ED8675AF99A494B309F3B8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,6 +322,7 @@
 		D6CF465022591D400044597B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,10 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6B710202255551000AE6399 /* Build configuration list for PBXNativeTarget "MercadoLivreDesafio" */;
 			buildPhases = (
+				12CBF8B0D5D368C51AD249BE /* [CP] Check Pods Manifest.lock */,
 				D6B7100A2255550E00AE6399 /* Sources */,
 				D6B7100B2255550E00AE6399 /* Frameworks */,
 				D6B7100C2255550E00AE6399 /* Resources */,
 				D6CF465F225931A30044597B /* Embed Frameworks */,
+				E85A0CFD6D268889C2F8CE11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,6 +398,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12CBF8B0D5D368C51AD249BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoLivreDesafio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E85A0CFD6D268889C2F8CE11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6B7100A2255550E00AE6399 /* Sources */ = {
@@ -561,6 +626,7 @@
 		};
 		D6B710212255551000AE6399 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5B4EC66007E8ABC698CF32C /* Pods-MercadoLivreDesafio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,6 +636,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MercadoLivreDesafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +650,7 @@
 		};
 		D6B710222255551000AE6399 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -592,6 +660,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MercadoLivreDesafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
