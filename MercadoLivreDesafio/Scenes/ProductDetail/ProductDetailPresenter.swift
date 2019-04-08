@@ -21,34 +21,16 @@ class ProductDetailPresenter {
     }
 }
 
-//
-//protocol ProductListPresenterOutput: class {
-//    func displayProducts(products: [ProductItemCell.ViewModel])
-//    func displayError(errorMessage: String)
-//}
-//
-//struct ProductListPresenter {
-//    private weak var output: ProductListPresenterOutput?
-//    private typealias ViewModel = ProductItemCell.ViewModel
-//
-//    init(output: ProductListPresenterOutput) {
-//        self.output = output
-//    }
-//}
-//
-//extension ProductListPresenter: ProductListIteractorOutput {
-//
-//    func presentProducts(products: [Product]) {
-//        output?.displayProducts(products: products.map {
-//            ViewModel(
-//                productImageUrl: $0.thumbnailURL,
-//                title: $0.title,
-//                price: String(format: "\($0.currencyId) %.02f", $0.price),
-//                availableQuantity: "\($0.availableQuantity) " + "available".localized)
-//        })
-//    }
-//
-//    func presentError(error: Error) {
-//        output?.displayError(errorMessage: error.localizedDescription)
-//    }
-//}
+extension ProductDetailPresenter: ProductDetailIteractorOutput {
+    func presentProduct(product: Product) {
+        output?.displayProduct(product: ViewModel(
+            productImageURL: product.thumbnailURL,
+            title: product.title,
+            priceString: String(format: "\(product.currencyId) %.02f", product.price),
+            availableString: "\(product.availableQuantity) " + "available".localized))
+    }
+    
+    func presentError(error: Error) {
+        fatalError("Trying to open product details without product")
+    }
+}

@@ -33,6 +33,7 @@ extension ProductListCoordinator: Coordinator {
 
 extension ProductListCoordinator: ProductListCoordinatorDelegate {
     func didSelectProduct(product: Product) {
-        //TODO: go to product detail flow
+        let coordinator = ProductDetailCoordinator(product: product, navigation: navigation)
+        coordinator.start()
     }
 }

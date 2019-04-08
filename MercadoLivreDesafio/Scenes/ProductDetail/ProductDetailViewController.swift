@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ProductDetailViewControllerOutput {
+    func fetchProduct()
+}
+
 class ProductDetailViewController: UIViewController {
     
     struct ViewModel {
@@ -50,6 +54,28 @@ class ProductDetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    var output: ProductDetailViewControllerOutput?
+    private let imageFetcher: ImageFetcher = ImageFetcherKingFisher()
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        setupView()
+        output?.fetchProduct()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ProductDetailViewController: ProductDetailPresenterOutput {
+    func displayProduct(product: ProductDetailViewController.ViewModel) {
+        imageFetcher.fetchImage(from: product.productImageURL, to: productImageView)
+        titleLabel.text = product.title
+        priceLabel.text = product.priceString
+        availableQuantityLabel.text = product.availableString
+    }
 }
 
 extension ProductDetailViewController: CodeView {

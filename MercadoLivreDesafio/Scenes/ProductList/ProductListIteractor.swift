@@ -18,6 +18,8 @@ class ProductListIteractor {
     private let output: ProductListIteractorOutput
     private let coordinatorDelegate: ProductListCoordinatorDelegate
     
+    private var products: [Product] = []
+    
     init(service: ProductServiceType,
          output: ProductListIteractorOutput,
          coordinatorDelegate: ProductListCoordinatorDelegate) {
@@ -33,6 +35,7 @@ extension ProductListIteractor: ProductListViewControllerOutput {
         service.fetchProducts(with: searchString) { [weak self] result in
             switch result {
             case .success(let products):
+                self?.products = products
                 self?.output.presentProducts(products: products)
             case .failure(let error):
                 self?.output.presentError(error: error)
@@ -41,6 +44,6 @@ extension ProductListIteractor: ProductListViewControllerOutput {
     }
     
     func selectProductItem(itemIndex: Int) {
-        
+        coordinatorDelegate.didSelectProduct(product: products[itemIndex])
     }
 }
