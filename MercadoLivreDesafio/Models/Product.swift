@@ -32,6 +32,7 @@ struct Product {
     let availableQuantity: Int
     let thumbnailURL: URL
     let acceptsMercadopago: Bool
+    let link: URL
 }
 
 extension Product: Decodable {
@@ -44,6 +45,7 @@ extension Product: Decodable {
         case availableQuantity = "available_quantity"
         case thumbnailURL = "thumbnail"
         case acceptsMercadopago = "accepts_mercadopago"
+        case link = "permalink"
     }
     
     init(from decoder: Decoder) throws {
@@ -56,5 +58,6 @@ extension Product: Decodable {
         availableQuantity = try productContainer.decode(Int.self, forKey: .availableQuantity)
         thumbnailURL = try productContainer.decode(URL.self, forKey: .thumbnailURL)
         acceptsMercadopago = try productContainer.decode(Bool.self, forKey: .acceptsMercadopago)
+        link = try productContainer.decode(URL.self, forKey: .link)
     }
 }

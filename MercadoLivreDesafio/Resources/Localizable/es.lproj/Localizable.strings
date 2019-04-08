@@ -9,3 +9,8 @@
 "available" = "disponible";
 "nodata" = "Sin Datos";
 "trySearchingSomething" = "intente buscar algo.";
+"openProduct" = "abrir producto";
+"yes" = "sí";
+"no" = "no";
+"product" = "Producto";
+"detail" = "Detalle";

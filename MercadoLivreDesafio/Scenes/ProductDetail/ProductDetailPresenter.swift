@@ -27,7 +27,9 @@ extension ProductDetailPresenter: ProductDetailIteractorOutput {
             productImageURL: product.thumbnailURL,
             title: product.title,
             priceString: String(format: "\(product.currencyId) %.02f", product.price),
-            availableString: "\(product.availableQuantity) " + "available".localized))
+            availableString: "\(product.availableQuantity) " + "available".localized,
+            acceptsMercadopagoString: "mercadoPago".localized.appending(
+                product.acceptsMercadopago ? "yes".localized : "no".localized)))
     }
     
     func presentError(error: Error) {

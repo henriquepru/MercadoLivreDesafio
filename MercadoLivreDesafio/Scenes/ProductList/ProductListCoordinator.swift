@@ -16,6 +16,7 @@ class ProductListCoordinator {
     
     private let navigation: UINavigationController
     private var productListController: ProductListViewController?
+    private var productDetailCoordinator: ProductDetailCoordinator?
     
     init(navigation: UINavigationController) {
         self.navigation = navigation
@@ -33,7 +34,7 @@ extension ProductListCoordinator: Coordinator {
 
 extension ProductListCoordinator: ProductListCoordinatorDelegate {
     func didSelectProduct(product: Product) {
-        let coordinator = ProductDetailCoordinator(product: product, navigation: navigation)
-        coordinator.start()
+        productDetailCoordinator = ProductDetailCoordinator(product: product, navigation: navigation)
+        productDetailCoordinator?.start()
     }
 }

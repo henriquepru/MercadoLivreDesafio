@@ -40,6 +40,7 @@ class ProductListViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         setupView()
+        configureLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,6 +67,11 @@ extension ProductListViewController: ProductListPresenterOutput {
 extension ProductListViewController {
     private func setupDataSource(viewModels: [ProductItemCell.ViewModel]) {
         dataSource.viewModels = viewModels
+    }
+    
+    private func configureLayout() {
+        title = "product".localized
+        view.backgroundColor = .white
     }
 }
 

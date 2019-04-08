@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductDetailViewControllerOutput {
     func fetchProduct()
+    func openProductLink()
 }
 
 class ProductDetailViewController: UIViewController {
@@ -19,12 +20,13 @@ class ProductDetailViewController: UIViewController {
         let title: String
         let priceString: String
         let availableString: String
+        let acceptsMercadopagoString: String
     }
     
     private let productImageView: UIImageView = {
-        let imageView = UIImageView()
+        let imageView = RoundedImageView()
         imageView.image = #imageLiteral(resourceName: "empty-product")
-        imageView.backgroundColor = UIColor.lightGray
+        imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -32,7 +34,7 @@ class ProductDetailViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = .boldSystemFont(ofSize: 20)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -41,18 +43,35 @@ class ProductDetailViewController: UIViewController {
     
     private let priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 18)
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let availableQuantityLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = .systemFont(ofSize: 16, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    private let acceptsMercadopagoLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16, weight: .medium)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var openProductButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        button.setTitle("openProduct".localized, for: .normal)
+        button.addTarget(self, action: #selector(didTapProductButton), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     var output: ProductDetailViewControllerOutput?
@@ -61,11 +80,30 @@ class ProductDetailViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         setupView()
-        output?.fetchProduct()
+        configureLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ProductDetailViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output?.fetchProduct()
+    }
+}
+
+extension ProductDetailViewController {
+    
+    private func configureLayout() {
+        title = "detail".localized
+        view.backgroundColor = .white
+    }
+    
+    @objc private func didTapProductButton() {
+        output?.openProductLink()
     }
 }
 
@@ -75,6 +113,7 @@ extension ProductDetailViewController: ProductDetailPresenterOutput {
         titleLabel.text = product.title
         priceLabel.text = product.priceString
         availableQuantityLabel.text = product.availableString
+        acceptsMercadopagoLabel.text = "Mercado pago: Sim"
     }
 }
 
@@ -84,26 +123,36 @@ extension ProductDetailViewController: CodeView {
         view.addSubview(titleLabel)
         view.addSubview(priceLabel)
         view.addSubview(availableQuantityLabel)
+        view.addSubview(acceptsMercadopagoLabel)
+        view.addSubview(openProductButton)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            productImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            productImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            productImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            productImageView.heightAnchor.constraint(equalToConstant: 120),
+            productImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            productImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            productImageView.heightAnchor.constraint(equalToConstant: 80),
+            productImageView.widthAnchor.constraint(equalToConstant: 80),
             
-            titleLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 8),
+            titleLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 8),
+            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            availableQuantityLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            availableQuantityLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+            availableQuantityLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             availableQuantityLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: 2),
             
-            availableQuantityLabel.widthAnchor.constraint(equalTo: priceLabel.widthAnchor)
+            availableQuantityLabel.widthAnchor.constraint(equalTo: priceLabel.widthAnchor),
+            
+            acceptsMercadopagoLabel.topAnchor.constraint(equalTo: availableQuantityLabel.bottomAnchor, constant: 32),
+            acceptsMercadopagoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            acceptsMercadopagoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            openProductButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
+            openProductButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }

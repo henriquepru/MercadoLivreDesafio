@@ -6,7 +6,7 @@
 //  Copyright © 2019 Henrique Prudêncio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ProductDetailIteractorOutput {
     func presentProduct(product: Product)
@@ -25,6 +25,10 @@ class ProductDetailIteractor {
     }
 }
 extension ProductDetailIteractor: ProductDetailViewControllerOutput {
+    func openProductLink() {
+        UIApplication.shared.open(product.link)
+    }
+    
     func fetchProduct() {
         output.presentProduct(product: product)
     }

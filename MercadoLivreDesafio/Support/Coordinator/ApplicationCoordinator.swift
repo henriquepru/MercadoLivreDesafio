@@ -32,6 +32,7 @@ extension ApplicationCoordinator {
 extension ApplicationCoordinator {
     private static func customNavigationController() -> UINavigationController {
         let navigation = UINavigationController()
+        navigation.navigationBar.tintColor = .black
         return navigation
     }
 }
