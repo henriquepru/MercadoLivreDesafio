@@ -18,7 +18,6 @@
 		D62C7BE62257E53E00E1270B /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BE52257E53E00E1270B /* ProductListPresenter.swift */; };
 		D62C7BE82257E85B00E1270B /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C7BE72257E85B00E1270B /* ProductListViewController.swift */; };
 		D6B710122255550E00AE6399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710112255550E00AE6399 /* AppDelegate.swift */; };
-		D6B710142255550E00AE6399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710132255550E00AE6399 /* ViewController.swift */; };
 		D6B710192255551000AE6399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B710182255551000AE6399 /* Assets.xcassets */; };
 		D6B7101C2255551000AE6399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */; };
 		D6B710282255575B00AE6399 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710272255575B00AE6399 /* EndPointType.swift */; };
@@ -49,6 +48,7 @@
 		D6CF465422591D780044597B /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF465322591D780044597B /* ImageFetcher.swift */; };
 		D6CF4661225932670044597B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF4660225932670044597B /* EmptyDataView.swift */; };
 		D6CF46632259340B0044597B /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46622259340B0044597B /* UITableView+EmptyView.swift */; };
+		D6CFAE60225BDDE500D016B8 /* UIViewController+AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,7 +78,6 @@
 		D62C7BE72257E85B00E1270B /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		D6B7100E2255550E00AE6399 /* MercadoLivreDesafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLivreDesafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B710112255550E00AE6399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6B710132255550E00AE6399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6B710182255551000AE6399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6B7101B2255551000AE6399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B7101D2255551000AE6399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		D6CF465322591D780044597B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		D6CF4660225932670044597B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		D6CF46622259340B0044597B /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
+		D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertView.swift"; sourceTree = "<group>"; };
 		E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,7 +202,6 @@
 				D6B7103E22568D5900AE6399 /* Services */,
 				D6CF463C2259043A0044597B /* Resources */,
 				D6B710112255550E00AE6399 /* AppDelegate.swift */,
-				D6B710132255550E00AE6399 /* ViewController.swift */,
 				D6B710182255551000AE6399 /* Assets.xcassets */,
 				D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */,
 				D6B7101D2255551000AE6399 /* Info.plist */,
@@ -296,6 +295,7 @@
 				D6CF464D225913B20044597B /* String+Localizable.swift */,
 				D6CF465322591D780044597B /* ImageFetcher.swift */,
 				D6CF46622259340B0044597B /* UITableView+EmptyView.swift */,
+				D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -462,6 +462,7 @@
 				D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */,
 				D6B7103922566DFC00AE6399 /* Router.swift in Sources */,
 				D62C7BE02257B47B00E1270B /* ProductService.swift in Sources */,
+				D6CFAE60225BDDE500D016B8 /* UIViewController+AlertView.swift in Sources */,
 				D6B7102A225557FE00AE6399 /* HTTPMethod.swift in Sources */,
 				D5B9F483225A6E0A00EA1564 /* ProductDetailPresenter.swift in Sources */,
 				D6CF462F2258E7770044597B /* ProductListCoordinator.swift in Sources */,
@@ -470,7 +471,6 @@
 				D6B7102C225558BE00AE6399 /* HTTPTask.swift in Sources */,
 				D6B710332255628C00AE6399 /* ParameterEncoder.swift in Sources */,
 				D6CF46332258EE9A0044597B /* ProductListDataSourceDelegate.swift in Sources */,
-				D6B710142255550E00AE6399 /* ViewController.swift in Sources */,
 				D6CF464E225913B20044597B /* String+Localizable.swift in Sources */,
 				D62C7BE62257E53E00E1270B /* ProductListPresenter.swift in Sources */,
 				D5308A15225A94BC007FD286 /* ProductDetailConfigurator.swift in Sources */,

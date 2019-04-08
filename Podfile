@@ -7,5 +7,6 @@ target 'MercadoLivreDesafio' do
 
   # Pods for MercadoLivreDesafio
   pod 'Kingfisher', '= 4.9'
+  pod 'ListPlaceholder'
 
 end

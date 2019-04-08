@@ -25,6 +25,7 @@ class ProductListViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.setEmptyView()
         tableView.keyboardDismissMode = .onDrag
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -60,7 +61,7 @@ extension ProductListViewController: ProductListPresenterOutput {
     }
     
     func displayError(errorMessage: String) {
-        
+        showErrorAlertView(message: errorMessage)
     }
 }
 

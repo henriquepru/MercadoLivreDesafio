@@ -92,7 +92,7 @@ extension ProductItemCell: CodeView {
             titleLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             
-            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             priceLabel.leadingAnchor.constraint(greaterThanOrEqualTo: productImageView.trailingAnchor, constant: 8),
             
