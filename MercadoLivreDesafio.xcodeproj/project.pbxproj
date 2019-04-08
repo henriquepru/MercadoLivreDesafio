@@ -36,6 +36,11 @@
 		D6B71046225791B900AE6399 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B71045225791B900AE6399 /* Result.swift */; };
 		D6BEA76C225C0164009CEE6D /* ProductListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */; };
 		D6BEA76E225C01E4009CEE6D /* ProductListPresenterOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA76D225C01E4009CEE6D /* ProductListPresenterOutputMock.swift */; };
+		D6BEA772225C0A56009CEE6D /* ProductDetailIteractorOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA771225C0A56009CEE6D /* ProductDetailIteractorOutputMock.swift */; };
+		D6BEA774225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA773225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift */; };
+		D6BEA776225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA775225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift */; };
+		D6BEA778225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA777225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift */; };
+		D6BEA77A225C0D40009CEE6D /* ProductDetailPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA779225C0D40009CEE6D /* ProductDetailPresenterSpec.swift */; };
 		D6CF46252257E9F60044597B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46242257E9F60044597B /* CodeView.swift */; };
 		D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46272257EBFA0044597B /* ProductItemCell.swift */; };
 		D6CF462B2258E6150044597B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */; };
@@ -116,6 +121,11 @@
 		D6B71045225791B900AE6399 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterSpec.swift; sourceTree = "<group>"; };
 		D6BEA76D225C01E4009CEE6D /* ProductListPresenterOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterOutputMock.swift; sourceTree = "<group>"; };
+		D6BEA771225C0A56009CEE6D /* ProductDetailIteractorOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailIteractorOutputMock.swift; sourceTree = "<group>"; };
+		D6BEA773225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCoordinatorMock.swift; sourceTree = "<group>"; };
+		D6BEA775225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterOutputMock.swift; sourceTree = "<group>"; };
+		D6BEA777225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailIteractorSpec.swift; sourceTree = "<group>"; };
+		D6BEA779225C0D40009CEE6D /* ProductDetailPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterSpec.swift; sourceTree = "<group>"; };
 		D6CF46242257E9F60044597B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		D6CF46272257EBFA0044597B /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
 		D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -324,6 +334,26 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		D6BEA76F225C0A21009CEE6D /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D6BEA770225C0A2F009CEE6D /* MockProductDetail */,
+				D6BEA777225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift */,
+				D6BEA779225C0D40009CEE6D /* ProductDetailPresenterSpec.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		D6BEA770225C0A2F009CEE6D /* MockProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D6BEA771225C0A56009CEE6D /* ProductDetailIteractorOutputMock.swift */,
+				D6BEA773225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift */,
+				D6BEA775225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift */,
+			);
+			path = MockProductDetail;
+			sourceTree = "<group>";
+		};
 		D6CF46232257E95D0044597B /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +425,7 @@
 		D6CFAE6F225BF36B00D016B8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D6BEA76F225C0A21009CEE6D /* ProductDetail */,
 				D6CFAE70225BF3D800D016B8 /* ProductList */,
 			);
 			path = Scenes;
@@ -663,12 +694,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BEA77A225C0D40009CEE6D /* ProductDetailPresenterSpec.swift in Sources */,
 				D6CFAE72225BF3F600D016B8 /* ProductListIteractorSpec.swift in Sources */,
 				D6CFAE7B225BF7E400D016B8 /* ProductListCoordinatorMock.swift in Sources */,
 				D6CFAE77225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift in Sources */,
+				D6BEA776225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift in Sources */,
+				D6BEA774225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift in Sources */,
 				D6BEA76C225C0164009CEE6D /* ProductListPresenterSpec.swift in Sources */,
+				D6BEA778225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift in Sources */,
 				D6BEA76E225C01E4009CEE6D /* ProductListPresenterOutputMock.swift in Sources */,
 				D6CFAE75225BF50300D016B8 /* ProductServiceMock.swift in Sources */,
+				D6BEA772225C0A56009CEE6D /* ProductDetailIteractorOutputMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
