@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		010B3368CBE2330AA8110E28 /* Pods_MercadoLivreDesafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */; };
+		84A09C838502188E46D49D98 /* Pods_MercadoLivreDesafioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3175410615BA8AA3B7915 /* Pods_MercadoLivreDesafioTests.framework */; };
 		D5308A11225A9244007FD286 /* ProductDetailIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5308A10225A9244007FD286 /* ProductDetailIteractor.swift */; };
 		D5308A13225A941F007FD286 /* ProductDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5308A12225A941F007FD286 /* ProductDetailCoordinator.swift */; };
 		D5308A15225A94BC007FD286 /* ProductDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5308A14225A94BC007FD286 /* ProductDetailConfigurator.swift */; };
@@ -33,6 +34,8 @@
 		D6B7104122568DC900AE6399 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B7104022568DC900AE6399 /* Product.swift */; };
 		D6B710442256947300AE6399 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B710432256947300AE6399 /* NetworkManager.swift */; };
 		D6B71046225791B900AE6399 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B71045225791B900AE6399 /* Result.swift */; };
+		D6BEA76C225C0164009CEE6D /* ProductListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */; };
+		D6BEA76E225C01E4009CEE6D /* ProductListPresenterOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA76D225C01E4009CEE6D /* ProductListPresenterOutputMock.swift */; };
 		D6CF46252257E9F60044597B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46242257E9F60044597B /* CodeView.swift */; };
 		D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46272257EBFA0044597B /* ProductItemCell.swift */; };
 		D6CF462B2258E6150044597B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */; };
@@ -49,7 +52,10 @@
 		D6CF4661225932670044597B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF4660225932670044597B /* EmptyDataView.swift */; };
 		D6CF46632259340B0044597B /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46622259340B0044597B /* UITableView+EmptyView.swift */; };
 		D6CFAE60225BDDE500D016B8 /* UIViewController+AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */; };
-		D6CFAE68225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */; };
+		D6CFAE72225BF3F600D016B8 /* ProductListIteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE71225BF3F600D016B8 /* ProductListIteractorSpec.swift */; };
+		D6CFAE75225BF50300D016B8 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE74225BF50300D016B8 /* ProductServiceMock.swift */; };
+		D6CFAE77225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE76225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift */; };
+		D6CFAE7B225BF7E400D016B8 /* ProductListCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE7A225BF7E400D016B8 /* ProductListCoordinatorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,9 @@
 
 /* Begin PBXFileReference section */
 		494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivreDesafio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F3175410615BA8AA3B7915 /* Pods_MercadoLivreDesafioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivreDesafioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E35CADBFB4B6E5D0365D83E /* Pods-MercadoLivreDesafioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafioTests/Pods-MercadoLivreDesafioTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB2BD40E69DD286B8CC8522C /* Pods-MercadoLivreDesafioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafioTests/Pods-MercadoLivreDesafioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5B4EC66007E8ABC698CF32C /* Pods-MercadoLivreDesafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.debug.xcconfig"; sourceTree = "<group>"; };
 		D5308A10225A9244007FD286 /* ProductDetailIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailIteractor.swift; sourceTree = "<group>"; };
 		D5308A12225A941F007FD286 /* ProductDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCoordinator.swift; sourceTree = "<group>"; };
@@ -105,6 +114,8 @@
 		D6B7104022568DC900AE6399 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D6B710432256947300AE6399 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D6B71045225791B900AE6399 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterSpec.swift; sourceTree = "<group>"; };
+		D6BEA76D225C01E4009CEE6D /* ProductListPresenterOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterOutputMock.swift; sourceTree = "<group>"; };
 		D6CF46242257E9F60044597B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		D6CF46272257EBFA0044597B /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
 		D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -127,8 +138,11 @@
 		D6CF46622259340B0044597B /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 		D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertView.swift"; sourceTree = "<group>"; };
 		D6CFAE65225BF0ED00D016B8 /* MercadoLivreDesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLivreDesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLivreDesafioTests.swift; sourceTree = "<group>"; };
 		D6CFAE69225BF0ED00D016B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6CFAE71225BF3F600D016B8 /* ProductListIteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListIteractorSpec.swift; sourceTree = "<group>"; };
+		D6CFAE74225BF50300D016B8 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
+		D6CFAE76225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListIteractorOutpuMock.swift; sourceTree = "<group>"; };
+		D6CFAE7A225BF7E400D016B8 /* ProductListCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinatorMock.swift; sourceTree = "<group>"; };
 		E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A09C838502188E46D49D98 /* Pods_MercadoLivreDesafioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +171,8 @@
 			children = (
 				C5B4EC66007E8ABC698CF32C /* Pods-MercadoLivreDesafio.debug.xcconfig */,
 				E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */,
+				AB2BD40E69DD286B8CC8522C /* Pods-MercadoLivreDesafioTests.debug.xcconfig */,
+				6E35CADBFB4B6E5D0365D83E /* Pods-MercadoLivreDesafioTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -175,8 +192,8 @@
 		D62C7BE12257DB3900E1270B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D540BA30225A57190099CB0E /* ProductDetail */,
 				D62C7BE22257DB5600E1270B /* ProductList */,
+				D540BA30225A57190099CB0E /* ProductDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -361,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				494468A3E5BCFE9F1D59D98E /* Pods_MercadoLivreDesafio.framework */,
+				52F3175410615BA8AA3B7915 /* Pods_MercadoLivreDesafioTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,10 +386,39 @@
 		D6CFAE66225BF0ED00D016B8 /* MercadoLivreDesafioTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */,
+				D6CFAE6F225BF36B00D016B8 /* Scenes */,
 				D6CFAE69225BF0ED00D016B8 /* Info.plist */,
 			);
 			path = MercadoLivreDesafioTests;
+			sourceTree = "<group>";
+		};
+		D6CFAE6F225BF36B00D016B8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D6CFAE70225BF3D800D016B8 /* ProductList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D6CFAE70225BF3D800D016B8 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				D6CFAE73225BF4EB00D016B8 /* MockProductList */,
+				D6CFAE71225BF3F600D016B8 /* ProductListIteractorSpec.swift */,
+				D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		D6CFAE73225BF4EB00D016B8 /* MockProductList */ = {
+			isa = PBXGroup;
+			children = (
+				D6CFAE74225BF50300D016B8 /* ProductServiceMock.swift */,
+				D6CFAE76225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift */,
+				D6CFAE7A225BF7E400D016B8 /* ProductListCoordinatorMock.swift */,
+				D6BEA76D225C01E4009CEE6D /* ProductListPresenterOutputMock.swift */,
+			);
+			path = MockProductList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,9 +448,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6CFAE6E225BF0ED00D016B8 /* Build configuration list for PBXNativeTarget "MercadoLivreDesafioTests" */;
 			buildPhases = (
+				421E3D8C189C099B82E399BD /* [CP] Check Pods Manifest.lock */,
 				D6CFAE61225BF0ED00D016B8 /* Sources */,
 				D6CFAE62225BF0ED00D016B8 /* Frameworks */,
 				D6CFAE63225BF0ED00D016B8 /* Resources */,
+				A3A5A687A100E2786B78454F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -430,6 +479,7 @@
 					};
 					D6CFAE64225BF0ED00D016B8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = D6B7100D2255550E00AE6399;
 					};
 				};
@@ -493,6 +543,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421E3D8C189C099B82E399BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoLivreDesafioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A5A687A100E2786B78454F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoLivreDesafioTests/Pods-MercadoLivreDesafioTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercadoLivreDesafioTests/Pods-MercadoLivreDesafioTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E85A0CFD6D268889C2F8CE11 /* [CP] Embed Pods Frameworks */ = {
@@ -567,7 +663,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6CFAE68225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift in Sources */,
+				D6CFAE72225BF3F600D016B8 /* ProductListIteractorSpec.swift in Sources */,
+				D6CFAE7B225BF7E400D016B8 /* ProductListCoordinatorMock.swift in Sources */,
+				D6CFAE77225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift in Sources */,
+				D6BEA76C225C0164009CEE6D /* ProductListPresenterSpec.swift in Sources */,
+				D6BEA76E225C01E4009CEE6D /* ProductListPresenterOutputMock.swift in Sources */,
+				D6CFAE75225BF50300D016B8 /* ProductServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,8 +875,10 @@
 		};
 		D6CFAE6C225BF0ED00D016B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB2BD40E69DD286B8CC8522C /* Pods-MercadoLivreDesafioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M99837SUN;
 				INFOPLIST_FILE = MercadoLivreDesafioTests/Info.plist;
@@ -786,6 +889,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.MercadoLivreDesafioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoLivreDesafio.app/MercadoLivreDesafio";
@@ -794,8 +898,10 @@
 		};
 		D6CFAE6D225BF0ED00D016B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E35CADBFB4B6E5D0365D83E /* Pods-MercadoLivreDesafioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M99837SUN;
 				INFOPLIST_FILE = MercadoLivreDesafioTests/Info.plist;

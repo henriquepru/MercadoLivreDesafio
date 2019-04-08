@@ -9,4 +9,11 @@ target 'MercadoLivreDesafio' do
   pod 'Kingfisher', '= 4.9'
   pod 'ANLoader', :git => 'https://github.com/ANSCoder/ANLoader.git'
 
+  target 'MercadoLivreDesafioTests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+
+  end
 end

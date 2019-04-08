@@ -1,14 +1,20 @@
 PODS:
   - ANLoader (1.1.2.1)
   - Kingfisher (4.9.0)
+  - Nimble (7.3.4)
+  - Quick (1.3.4)
 
 DEPENDENCIES:
   - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
   - Kingfisher (= 4.9)
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - Nimble
+    - Quick
 
 EXTERNAL SOURCES:
   ANLoader:
@@ -22,7 +28,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ANLoader: f1bf96313ae246d427f306335b4a425f512131ea
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: f4f7f063c524394c73ed93ac70983c609805d481
 
-PODFILE CHECKSUM: 76433385184af42aa145da66a8a93e63e8b209fa
+PODFILE CHECKSUM: c9d8e7865ee02e517d95c4a74768dbc336dcca93
 
 COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module Pods_MercadoLivreDesafioTests {
+  umbrella header "Pods-MercadoLivreDesafioTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
