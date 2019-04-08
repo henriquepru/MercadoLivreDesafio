@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ANLoader
 
 protocol ProductListViewControllerOutput {
     func searchProducts(searchString: String)
@@ -57,10 +58,12 @@ extension ProductListViewController {
 
 extension ProductListViewController: ProductListPresenterOutput {
     func displayProducts(products: [ProductItemCell.ViewModel]) {
+        ANLoader.hide()
         setupDataSource(viewModels: products)
     }
     
     func displayError(errorMessage: String) {
+        ANLoader.hide()
         showErrorAlertView(message: errorMessage)
     }
 }
@@ -78,6 +81,7 @@ extension ProductListViewController {
 
 extension ProductListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        ANLoader.showLoading()
         if let searchText = searchBar.text {
             searchBar.resignFirstResponder()
             output?.searchProducts(searchString: searchText)

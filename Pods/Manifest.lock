@@ -1,16 +1,28 @@
 PODS:
+  - ANLoader (1.1.2.1)
   - Kingfisher (4.9.0)
 
 DEPENDENCIES:
+  - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
   - Kingfisher (= 4.9)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
 
+EXTERNAL SOURCES:
+  ANLoader:
+    :git: https://github.com/ANSCoder/ANLoader.git
+
+CHECKOUT OPTIONS:
+  ANLoader:
+    :commit: a7edb770cbae639b92e5ef3f2376a7877faad3f1
+    :git: https://github.com/ANSCoder/ANLoader.git
+
 SPEC CHECKSUMS:
+  ANLoader: f1bf96313ae246d427f306335b4a425f512131ea
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
 
-PODFILE CHECKSUM: 40bab532f0e275e84167e0b7132abba12bc24606
+PODFILE CHECKSUM: 76433385184af42aa145da66a8a93e63e8b209fa
 
 COCOAPODS: 1.5.3

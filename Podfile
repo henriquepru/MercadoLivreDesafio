@@ -7,6 +7,6 @@ target 'MercadoLivreDesafio' do
 
   # Pods for MercadoLivreDesafio
   pod 'Kingfisher', '= 4.9'
-  pod 'ListPlaceholder'
+  pod 'ANLoader', :git => 'https://github.com/ANSCoder/ANLoader.git'
 
 end
