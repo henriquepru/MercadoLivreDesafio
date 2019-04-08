@@ -49,7 +49,18 @@
 		D6CF4661225932670044597B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF4660225932670044597B /* EmptyDataView.swift */; };
 		D6CF46632259340B0044597B /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46622259340B0044597B /* UITableView+EmptyView.swift */; };
 		D6CFAE60225BDDE500D016B8 /* UIViewController+AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */; };
+		D6CFAE68225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6CFAE6A225BF0ED00D016B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6B710062255550E00AE6399 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6B7100D2255550E00AE6399;
+			remoteInfo = MercadoLivreDesafio;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D6CF465F225931A30044597B /* Embed Frameworks */ = {
@@ -115,6 +126,9 @@
 		D6CF4660225932670044597B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		D6CF46622259340B0044597B /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 		D6CFAE5F225BDDE500D016B8 /* UIViewController+AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertView.swift"; sourceTree = "<group>"; };
+		D6CFAE65225BF0ED00D016B8 /* MercadoLivreDesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLivreDesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLivreDesafioTests.swift; sourceTree = "<group>"; };
+		D6CFAE69225BF0ED00D016B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E593A1811B21C820DCF3BA9D /* Pods-MercadoLivreDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreDesafio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLivreDesafio/Pods-MercadoLivreDesafio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +138,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				010B3368CBE2330AA8110E28 /* Pods_MercadoLivreDesafio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6CFAE62225BF0ED00D016B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B710102255550E00AE6399 /* MercadoLivreDesafio */,
+				D6CFAE66225BF0ED00D016B8 /* MercadoLivreDesafioTests */,
 				D6B7100F2255550E00AE6399 /* Products */,
 				D6CF465022591D400044597B /* Frameworks */,
 				40ED8675AF99A494B309F3B8 /* Pods */,
@@ -188,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B7100E2255550E00AE6399 /* MercadoLivreDesafio.app */,
+				D6CFAE65225BF0ED00D016B8 /* MercadoLivreDesafioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +365,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6CFAE66225BF0ED00D016B8 /* MercadoLivreDesafioTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6CFAE67225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift */,
+				D6CFAE69225BF0ED00D016B8 /* Info.plist */,
+			);
+			path = MercadoLivreDesafioTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,6 +397,24 @@
 			productReference = D6B7100E2255550E00AE6399 /* MercadoLivreDesafio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6CFAE64225BF0ED00D016B8 /* MercadoLivreDesafioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6CFAE6E225BF0ED00D016B8 /* Build configuration list for PBXNativeTarget "MercadoLivreDesafioTests" */;
+			buildPhases = (
+				D6CFAE61225BF0ED00D016B8 /* Sources */,
+				D6CFAE62225BF0ED00D016B8 /* Frameworks */,
+				D6CFAE63225BF0ED00D016B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6CFAE6B225BF0ED00D016B8 /* PBXTargetDependency */,
+			);
+			name = MercadoLivreDesafioTests;
+			productName = MercadoLivreDesafioTests;
+			productReference = D6CFAE65225BF0ED00D016B8 /* MercadoLivreDesafioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,6 +427,10 @@
 				TargetAttributes = {
 					D6B7100D2255550E00AE6399 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					D6CFAE64225BF0ED00D016B8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D6B7100D2255550E00AE6399;
 					};
 				};
 			};
@@ -397,6 +451,7 @@
 			projectRoot = "";
 			targets = (
 				D6B7100D2255550E00AE6399 /* MercadoLivreDesafio */,
+				D6CFAE64225BF0ED00D016B8 /* MercadoLivreDesafioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +464,13 @@
 				D6B7101C2255551000AE6399 /* LaunchScreen.storyboard in Resources */,
 				D6CF4647225906FE0044597B /* Localizable.strings in Resources */,
 				D6B710192255551000AE6399 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6CFAE63225BF0ED00D016B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +563,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6CFAE61225BF0ED00D016B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CFAE68225BF0ED00D016B8 /* MercadoLivreDesafioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6CFAE6B225BF0ED00D016B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6B7100D2255550E00AE6399 /* MercadoLivreDesafio */;
+			targetProxy = D6CFAE6A225BF0ED00D016B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6B7101A2255551000AE6399 /* LaunchScreen.storyboard */ = {
@@ -694,6 +772,46 @@
 			};
 			name = Release;
 		};
+		D6CFAE6C225BF0ED00D016B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M99837SUN;
+				INFOPLIST_FILE = MercadoLivreDesafioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.MercadoLivreDesafioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoLivreDesafio.app/MercadoLivreDesafio";
+			};
+			name = Debug;
+		};
+		D6CFAE6D225BF0ED00D016B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M99837SUN;
+				INFOPLIST_FILE = MercadoLivreDesafioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henrique.prudencio.MercadoLivreDesafioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoLivreDesafio.app/MercadoLivreDesafio";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -711,6 +829,15 @@
 			buildConfigurations = (
 				D6B710212255551000AE6399 /* Debug */,
 				D6B710222255551000AE6399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6CFAE6E225BF0ED00D016B8 /* Build configuration list for PBXNativeTarget "MercadoLivreDesafioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6CFAE6C225BF0ED00D016B8 /* Debug */,
+				D6CFAE6D225BF0ED00D016B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
