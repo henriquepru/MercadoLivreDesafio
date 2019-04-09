@@ -1,17 +1,24 @@
 PODS:
   - ANLoader (1.1.2.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
   - Kingfisher (4.9.0)
   - Nimble (7.3.4)
   - Quick (1.3.4)
 
 DEPENDENCIES:
   - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
+  - FBSnapshotTestCase
   - Kingfisher (= 4.9)
   - Nimble
   - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
     - Kingfisher
     - Nimble
     - Quick
@@ -27,10 +34,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ANLoader: f1bf96313ae246d427f306335b4a425f512131ea
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
 
-PODFILE CHECKSUM: c9d8e7865ee02e517d95c4a74768dbc336dcca93
+PODFILE CHECKSUM: 1634a2f63f72344606f76aea581212fb93e01049
 
 COCOAPODS: 1.5.3

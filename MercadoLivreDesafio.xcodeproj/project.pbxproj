@@ -41,6 +41,7 @@
 		D6BEA776225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA775225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift */; };
 		D6BEA778225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA777225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift */; };
 		D6BEA77A225C0D40009CEE6D /* ProductDetailPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA779225C0D40009CEE6D /* ProductDetailPresenterSpec.swift */; };
+		D6BEA77C225C1014009CEE6D /* ProductListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEA77B225C1014009CEE6D /* ProductListViewControllerSpec.swift */; };
 		D6CF46252257E9F60044597B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46242257E9F60044597B /* CodeView.swift */; };
 		D6CF46282257EBFA0044597B /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF46272257EBFA0044597B /* ProductItemCell.swift */; };
 		D6CF462B2258E6150044597B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */; };
@@ -126,6 +127,7 @@
 		D6BEA775225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterOutputMock.swift; sourceTree = "<group>"; };
 		D6BEA777225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailIteractorSpec.swift; sourceTree = "<group>"; };
 		D6BEA779225C0D40009CEE6D /* ProductDetailPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenterSpec.swift; sourceTree = "<group>"; };
+		D6BEA77B225C1014009CEE6D /* ProductListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerSpec.swift; sourceTree = "<group>"; };
 		D6CF46242257E9F60044597B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		D6CF46272257EBFA0044597B /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
 		D6CF462A2258E6150044597B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				D6CFAE73225BF4EB00D016B8 /* MockProductList */,
 				D6CFAE71225BF3F600D016B8 /* ProductListIteractorSpec.swift */,
 				D6BEA76B225C0164009CEE6D /* ProductListPresenterSpec.swift */,
+				D6BEA77B225C1014009CEE6D /* ProductListViewControllerSpec.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoLivreDesafioTests/Pods-MercadoLivreDesafioTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -614,6 +618,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -699,6 +704,7 @@
 				D6CFAE7B225BF7E400D016B8 /* ProductListCoordinatorMock.swift in Sources */,
 				D6CFAE77225BF6EF00D016B8 /* ProductListIteractorOutpuMock.swift in Sources */,
 				D6BEA776225C0AF6009CEE6D /* ProductDetailPresenterOutputMock.swift in Sources */,
+				D6BEA77C225C1014009CEE6D /* ProductListViewControllerSpec.swift in Sources */,
 				D6BEA774225C0ABD009CEE6D /* ProductDetailCoordinatorMock.swift in Sources */,
 				D6BEA76C225C0164009CEE6D /* ProductListPresenterSpec.swift in Sources */,
 				D6BEA778225C0BDC009CEE6D /* ProductDetailIteractorSpec.swift in Sources */,

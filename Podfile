@@ -14,7 +14,6 @@ target 'MercadoLivreDesafio' do
 
     pod 'Quick'
     pod 'Nimble'
-    pod 'SnapshotTesting', '~> 1.5'
-
+    pod 'FBSnapshotTestCase'
   end
 end
